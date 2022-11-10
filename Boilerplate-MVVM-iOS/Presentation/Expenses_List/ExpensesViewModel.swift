@@ -7,26 +7,32 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
-final class ExpensesViewModel{
+class ExpensesViewModel{
     
     private let disposeBag: DisposeBag = DisposeBag()
     
     private final let expensesRepository: ExpensesRepository
     
-    public let expenses: PublishSubject<Expenses> = .init()
+    let expenses: PublishSubject<[Expenses]> = .init()
+    public let ex = PublishSubject<String>()
+    public let test = PublishSubject<String>()
     
-    init(expnesesRepository: ExpensesRepository){
-        self.expensesRepository = expnesesRepository
+    init(expensesRepository: ExpensesRepository){
+        self.expensesRepository = expensesRepository
     }
     
     func getExpenses(){
+        
         expensesRepository.getExpenses()
-            .subscribe(onNext: {_ in
-                print("success")
-            }, onError: {_ in
+            .subscribe(onNext: { element in
+                self.expenses.onNext(element)
+            }, onError: { error in
                 print("error")
-            }
-            ).disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
+        
     }
+    
 }

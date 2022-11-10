@@ -13,11 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let container = Container() { container in
         container.register(ExpensesRepository.self) { resolver in
-            ExpensesRepositoryImpl()
+            ExpensesRepositoryImpl(apiService: APIService())
         }
         
         container.register(ExpensesViewModel.self) { resolver in
-            ExpensesViewModel(expnesesRepository: resolver.resolve(ExpensesRepository.self)!)
+            ExpensesViewModel(expensesRepository: resolver.resolve(ExpensesRepository.self)!)
             
         }
         

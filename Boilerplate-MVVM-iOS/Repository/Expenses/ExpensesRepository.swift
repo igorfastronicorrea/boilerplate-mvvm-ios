@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol ExpensesRepository{
-    func getExpenses() -> Observable<Expenses>
+    func getExpenses() -> Observable<[Expenses]>
 }

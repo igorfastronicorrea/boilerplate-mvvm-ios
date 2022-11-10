@@ -10,6 +10,7 @@ target 'Boilerplate-MVVM-iOS' do
   pod 'RxCocoa'
   pod 'SwiftyJSON'
   pod 'Swinject'
+  pod 'Alamofire'
 
   target 'Boilerplate-MVVM-iOSTests' do
     inherit! :search_paths

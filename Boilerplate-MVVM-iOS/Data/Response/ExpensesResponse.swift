@@ -18,3 +18,7 @@ struct Expenses: Codable{
         case id, name, date, price
     }
 }
+
+struct ExpenseList: Codable{
+    var expenses: [Expenses]
+}
