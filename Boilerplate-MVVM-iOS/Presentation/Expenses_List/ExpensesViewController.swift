@@ -19,8 +19,8 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var expenseView: UIView!
     
     @IBAction func testDetail(_ sender: Any) {
-        let detailVC = storyboard?.instantiateViewController(withIdentifier: "expenseDetailVC") as! ExpenseDetailViewController
-        self.present(detailVC, animated: true)
+        let detailVC = DetailViewController()
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     private lazy var expenseViewController: ExpensesTableViewVC = {

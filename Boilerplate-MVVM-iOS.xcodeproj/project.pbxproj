@@ -30,7 +30,8 @@
 		CA6E8C25291AD554001BC06E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E8C24291AD554001BC06E /* APIService.swift */; };
 		CA6E8C28291D3B15001BC06E /* ExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E8C27291D3B15001BC06E /* ExpenseDetailViewController.swift */; };
 		CA6E8C2A291D3B2A001BC06E /* ExpenseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E8C29291D3B2A001BC06E /* ExpenseDetailViewModel.swift */; };
-		CA6E8C2C291D3C34001BC06E /* ExpenseDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6E8C2B291D3C34001BC06E /* ExpenseDetail.storyboard */; };
+		CA6E8C7C291E8FCB001BC06E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E8C7A291E8FCB001BC06E /* DetailViewController.swift */; };
+		CA6E8C7D291E8FCB001BC06E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6E8C7B291E8FCB001BC06E /* DetailViewController.xib */; };
 		E597F8085E1DFDB108F7D3AE /* Pods_Boilerplate_MVVM_iOS_Boilerplate_MVVM_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C927A512CC81FA1E444C8FC /* Pods_Boilerplate_MVVM_iOS_Boilerplate_MVVM_iOSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +85,8 @@
 		CA6E8C24291AD554001BC06E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CA6E8C27291D3B15001BC06E /* ExpenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewController.swift; sourceTree = "<group>"; };
 		CA6E8C29291D3B2A001BC06E /* ExpenseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewModel.swift; sourceTree = "<group>"; };
-		CA6E8C2B291D3C34001BC06E /* ExpenseDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpenseDetail.storyboard; sourceTree = "<group>"; };
+		CA6E8C7A291E8FCB001BC06E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CA6E8C7B291E8FCB001BC06E /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		CBB9C768D8F1342941C80267 /* Pods-Boilerplate-MVVM-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilerplate-MVVM-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Boilerplate-MVVM-iOS/Pods-Boilerplate-MVVM-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F9334F8223A9443085819B3D /* Pods-Boilerplate-MVVM-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilerplate-MVVM-iOS.release.xcconfig"; path = "Target Support Files/Pods-Boilerplate-MVVM-iOS/Pods-Boilerplate-MVVM-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 		CA40575928FF65700023D4F8 /* Boilerplate-MVVM-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CA6E8C79291E8F92001BC06E /* Views */,
 				CA6E8C2329198999001BC06E /* API */,
 				CA6E8C202919485D001BC06E /* Helper */,
 				CA6755772912B66F0040C545 /* Support Files */,
@@ -202,6 +205,7 @@
 		CA40578A28FF6C340023D4F8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CA6E8C7A291E8FCB001BC06E /* DetailViewController.swift */,
 				CA6E8C26291D3AF8001BC06E /* Expense_Detail */,
 				CA40579328FF6E190023D4F8 /* Expenses_List */,
 			);
@@ -289,9 +293,16 @@
 			children = (
 				CA6E8C27291D3B15001BC06E /* ExpenseDetailViewController.swift */,
 				CA6E8C29291D3B2A001BC06E /* ExpenseDetailViewModel.swift */,
-				CA6E8C2B291D3C34001BC06E /* ExpenseDetail.storyboard */,
 			);
 			path = Expense_Detail;
+			sourceTree = "<group>";
+		};
+		CA6E8C79291E8F92001BC06E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA6E8C7B291E8FCB001BC06E /* DetailViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,8 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA67557A2912B70E0040C545 /* ExpensesTableViewCell.xib in Resources */,
-				CA6E8C2C291D3C34001BC06E /* ExpenseDetail.storyboard in Resources */,
 				CA40576728FF65700023D4F8 /* LaunchScreen.storyboard in Resources */,
+				CA6E8C7D291E8FCB001BC06E /* DetailViewController.xib in Resources */,
 				CA40576428FF65700023D4F8 /* Assets.xcassets in Resources */,
 				CA40576228FF65700023D4F8 /* Main.storyboard in Resources */,
 			);
@@ -547,6 +558,7 @@
 				CA6E8C25291AD554001BC06E /* APIService.swift in Sources */,
 				CA6E8C222919486A001BC06E /* Extensiones.swift in Sources */,
 				CA40579A28FF6EAF0023D4F8 /* ExpensesRepositoryImpl.swift in Sources */,
+				CA6E8C7C291E8FCB001BC06E /* DetailViewController.swift in Sources */,
 				CA40579828FF6E9A0023D4F8 /* ExpensesRepository.swift in Sources */,
 				CA6E8C28291D3B15001BC06E /* ExpenseDetailViewController.swift in Sources */,
 			);
